@@ -16,4 +16,7 @@ export default class App extends Vue {}
 
 </script>
 
-<style></style>
+<style>
+  @import 'assets/styles/grid/grid.css';
+</style>
+

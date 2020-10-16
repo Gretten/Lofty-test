@@ -1,9 +1,10 @@
 <template>
   <div>
-    <p>Hello, World!</p>
-    <v-data-table
-
+    <CommonTable
+      :headers="headers"
+      class="common-table--half"
     />
   </div>
 </template>
-<script lang="ts" src="./home-component.ts"></script>
+
+<script lang="ts" src="./home.ts"></script>
