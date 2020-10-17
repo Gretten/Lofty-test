@@ -1,6 +1,12 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
+import { highlight, highlightRow } from "@/services/filetrs";
 
-@Component
+@Component({
+    filters: {
+        highlight,
+        highlightRow,
+    }
+})
 export default class CommonTable extends Vue {
     @Prop() public headers!: [];
 

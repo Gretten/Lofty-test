@@ -18,6 +18,9 @@
           sort-by="calories"
           class="elevation-1"
       >
+        <template #item.name="{ item }">
+          <span :inner-html.prop="item.name | highlight(search)"></span>
+        </template>
         <template v-slot:top>
           <v-toolbar
               flat
