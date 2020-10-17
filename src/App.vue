@@ -10,7 +10,7 @@ import Home from "@/views/Home/Home.vue";
 @Component({
   components: {
     Home,
-  }
+  },
 })
 export default class App extends Vue {}
 
