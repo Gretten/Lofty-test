@@ -3,8 +3,6 @@ import CommonTable from "@/components/CommonTable/CommonTable.vue";
 import {Action, Getter} from "vuex-class";
 import { FETCH_DATA, GET_DATA } from "@/store/main-store/type-main";
 import { headers } from "@/config/headers";
-import { dummyJSON } from "@/services/dummy-data/data";
-
 
 @Component({
     components: {
@@ -21,11 +19,11 @@ export default class Home extends Vue {
     headers = headers.commonHeaders;
 
     get fetchedData() {
-        return dummyJSON;
+        return this.getData;
     }
 
-    created() {
-        console.log(dummyJSON)
+    mounted() {
+        this.fetchData();
     }
 
 }
