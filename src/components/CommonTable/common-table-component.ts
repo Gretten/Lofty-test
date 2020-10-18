@@ -1,5 +1,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { highlight, breakUpToLocale } from "@/services/filetrs"
+import {Getter, Mutation} from "vuex-class";
+import {GET_DATA, SET_DATA} from "@/store/main-store/type-main";
 
 @Component({
     filters: {
@@ -11,6 +13,12 @@ export default class CommonTable extends Vue {
     @Prop() public headers!: [];
 
     @Prop() public items!: [];
+
+    @Getter(GET_DATA)
+    getData!: Array<any>;
+
+    @Mutation(SET_DATA)
+    setData!: (payload: any) => void;
 
     search = '';
     dialog = false
@@ -37,6 +45,9 @@ export default class CommonTable extends Vue {
         return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
     }
 
+    get currentStore() {
+        return this.getData;
+    }
 
     editItem (item: any): void {
         this.editedIndex = this.desserts.indexOf(item)
@@ -45,13 +56,15 @@ export default class CommonTable extends Vue {
     }
 
     deleteItem (item: any) {
-        this.editedIndex = this.desserts.indexOf(item)
-        this.editedItem = Object.assign({}, item)
+        this.editedIndex = this.currentStore.indexOf(item)
         this.dialogDelete = true
+
     }
 
     deleteItemConfirm () {
-        this.desserts.splice(this.editedIndex, 1)
+        const currentStore = this.currentStore;
+        currentStore.splice(this.editedIndex, 1)
+        this.setData(currentStore);
         this.closeDelete()
     }
 

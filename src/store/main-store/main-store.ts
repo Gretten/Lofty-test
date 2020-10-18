@@ -14,8 +14,8 @@ const goodsStore: Module<GoodsStoreInt, object> = {
         [types.GET_DATA]: state => state.goods
     },
     mutations: {
-        [types.SET_DATA](state, goods) {
-            state.goods = goods;
+        [types.SET_DATA](state, payload) {
+            state.goods = payload;
         },
     },
     actions: {
