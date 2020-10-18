@@ -21,6 +21,7 @@ const goodsStore: Module<GoodsStoreInt, object> = {
         [types.FETCH_DATA]({ commit }) {
             return restService.retrieve()
                 .then(res => {
+                    console.log(res);
                     commit(types.SET_DATA, res);
                     return res;
                 });

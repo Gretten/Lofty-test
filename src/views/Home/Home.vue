@@ -2,7 +2,9 @@
   <div>
     <CommonTable
       :headers="headers"
+      :items="fetchedData"
       class="common-table--half"
+      v-if="fetchedData"
     />
   </div>
 </template>
