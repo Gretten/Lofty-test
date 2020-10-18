@@ -97,4 +97,8 @@ export default class CommonTable extends Vue {
         this.close()
     }
 
+    searchNamesOnly (value: any, search: string, item: any): void {
+        return item.name;
+    }
+
 }

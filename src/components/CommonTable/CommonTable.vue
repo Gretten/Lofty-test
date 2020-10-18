@@ -17,6 +17,7 @@
           :search="search"
           sort-by="calories"
           class="elevation-1"
+          :custom-filter="searchNamesOnly"
       >
         <template #item.name="{ item }">
           <span :inner-html.prop="item.name | highlight(search)"></span>
