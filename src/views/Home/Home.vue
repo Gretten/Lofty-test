@@ -3,7 +3,7 @@
     <CommonTable
       :headers="headers"
       :items="fetchedData"
-      class="common-table--half"
+      class="common-table-half"
       v-if="fetchedData"
     />
   </div>
