@@ -21,6 +21,21 @@
         <template #item.name="{ item }">
           <span :inner-html.prop="item.name | highlight(search)"></span>
         </template>
+        <template v-slot:item.weight="{ item }">
+          <span>
+            {{ item.weight | breakUpToLocale }}
+          </span>
+        </template>
+        <template v-slot:item.quantity="{ item }">
+          <span>
+            {{ item.quantity | breakUpToLocale }}
+          </span>
+        </template>
+        <template v-slot:item.price="{ item }">
+          <span>
+            {{ item.price | breakUpToLocale }}
+          </span>
+        </template>
         <template v-slot:top>
           <v-toolbar
               flat

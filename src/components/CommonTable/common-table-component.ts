@@ -1,9 +1,10 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { highlight } from "@/services/filetrs";
+import { highlight, breakUpToLocale } from "@/services/filetrs"
 
 @Component({
     filters: {
         highlight,
+        breakUpToLocale,
     }
 })
 export default class CommonTable extends Vue {

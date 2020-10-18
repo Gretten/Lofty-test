@@ -9,3 +9,7 @@ const capitalizeFirstLetter = (value: string): string => {
 export const highlight = (value: string, query: string): string => {
     return value.replace(new RegExp(query, "ig"), '<span style=\'background: red\'>' + capitalizeFirstLetter(query) + '</span>')
 }
+
+export const breakUpToLocale = (value: string): string => {
+    return Number(value).toLocaleString('ru')
+};
