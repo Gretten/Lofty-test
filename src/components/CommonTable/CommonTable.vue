@@ -40,23 +40,23 @@
           <v-toolbar
               flat
           >
+            <router-link to="/new">
+              <v-btn
+                  color="success"
+                  dark
+                  class="mb-2"
+                  v-bind="attrs"
+                  v-on="on"
+              ><v-icon left>
+                mdi-arrow-down
+              </v-icon>
+                Создать новый товар
+              </v-btn>
+            </router-link>
             <v-dialog
                 v-model="dialog"
                 max-width="500px"
             >
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                    color="success"
-                    dark
-                    class="mb-2"
-                    v-bind="attrs"
-                    v-on="on"
-                ><v-icon left>
-                  mdi-arrow-down
-                </v-icon>
-                  Создать новый товар
-                </v-btn>
-              </template>
               <v-card>
                 <v-card-title>
                   <span class="headline">{{ formTitle }}</span>
