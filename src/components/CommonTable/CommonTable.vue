@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="margin-30"
-    >
+    <div>
       <v-card-title>
         <v-text-field
             v-model="search"
@@ -45,8 +43,6 @@
                   color="success"
                   dark
                   class="mb-2"
-                  v-bind="attrs"
-                  v-on="on"
               ><v-icon left>
                 mdi-arrow-down
               </v-icon>

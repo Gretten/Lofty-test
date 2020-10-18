@@ -1,5 +1,5 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { highlight, breakUpToLocale } from "@/services/filetrs"
+import { highlight, breakUpToLocale } from "@/config/filetrs"
 import {Getter, Mutation} from "vuex-class";
 import {GET_DATA, SET_DATA} from "@/store/main-store/type-main";
 
@@ -24,7 +24,6 @@ export default class CommonTable extends Vue {
     dialog = false
     dialogDelete = false
 
-    desserts: any = []
     editedIndex = -1
     editedItem = {
         name: '',
