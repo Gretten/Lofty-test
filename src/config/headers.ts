@@ -4,7 +4,6 @@ export const headers = {
             text: 'Артикул',
             value: 'artnumber',
             align: 'left',
-            sortable: false,
         },
         {
             text: 'Название',

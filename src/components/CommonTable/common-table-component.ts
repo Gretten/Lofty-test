@@ -50,7 +50,7 @@ export default class CommonTable extends Vue {
     }
 
     editItem (item: any): void {
-        this.editedIndex = this.desserts.indexOf(item)
+        this.editedIndex = this.currentStore.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialog = true
     }
@@ -86,9 +86,13 @@ export default class CommonTable extends Vue {
 
     save () {
         if (this.editedIndex > -1) {
-            Object.assign(this.desserts[this.editedIndex], this.editedItem)
+            const currentStore = this.currentStore;
+            const startIndex = this.editedIndex;
+            const elementsToEdit = 1;
+            currentStore.splice(startIndex, elementsToEdit, this.editedItem);
+            this.setData(currentStore);
         } else {
-            this.desserts.push(this.editedItem)
+            this.setData(this.editedItem)
         }
         this.close()
     }

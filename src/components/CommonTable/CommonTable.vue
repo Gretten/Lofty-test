@@ -69,8 +69,18 @@
                           md="4"
                       >
                         <v-text-field
+                            v-model="editedItem.artnumber"
+                            label="Артикул"
+                        ></v-text-field>
+                      </v-col>
+                      <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                      >
+                        <v-text-field
                             v-model="editedItem.name"
-                            label="Dessert name"
+                            label="Название"
                         ></v-text-field>
                       </v-col>
                       <v-col
@@ -79,8 +89,8 @@
                           md="4"
                       >
                         <v-text-field
-                            v-model="editedItem.calories"
-                            label="Calories"
+                            v-model="editedItem.brand"
+                            label="Бренд"
                         ></v-text-field>
                       </v-col>
                       <v-col
@@ -89,8 +99,8 @@
                           md="4"
                       >
                         <v-text-field
-                            v-model="editedItem.fat"
-                            label="Fat (g)"
+                            v-model="editedItem.weight"
+                            label="Вес"
                         ></v-text-field>
                       </v-col>
                       <v-col
@@ -99,8 +109,8 @@
                           md="4"
                       >
                         <v-text-field
-                            v-model="editedItem.carbs"
-                            label="Carbs (g)"
+                            v-model="editedItem.quantity"
+                            label="Количество"
                         ></v-text-field>
                       </v-col>
                       <v-col
@@ -109,8 +119,18 @@
                           md="4"
                       >
                         <v-text-field
-                            v-model="editedItem.protein"
-                            label="Protein (g)"
+                            v-model="editedItem.price"
+                            label="Цена"
+                        ></v-text-field>
+                      </v-col>
+                      <v-col
+                          cols="12"
+                          sm="6"
+                          md="4"
+                      >
+                        <v-text-field
+                            v-model="editedItem.stock"
+                            label="Наличие"
                         ></v-text-field>
                       </v-col>
                     </v-row>

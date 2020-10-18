@@ -106,41 +106,5 @@ export const dummyJSON = JSON.parse(`[
         "quantity": "10",
         "price": "1800",
         "stock": "1"
-    },
-    {
-        "artnumber": "123422513",
-        "name": "Корм 9",
-        "brand": "Whiskas",
-        "weight": "800",
-        "quantity": "1",
-        "price": "10",
-        "stock": "1"
-    },
-    {
-        "artnumber": "123444515",
-        "name": "Корм 10",
-        "brand": "Whiskas",
-        "weight": "1500",
-        "quantity": "1",
-        "price": "860",
-        "stock": "0"
-    },
-    {
-        "artnumber": "125534514",
-        "name": "Корм 11",
-        "brand": "Petcurean",
-        "weight": "800",
-        "quantity": "20",
-        "price": "1150",
-        "stock": "1"
-    },
-    {
-        "artnumber": "12366456654",
-        "name": "Корм 12",
-        "brand": "AlmoNature",
-        "weight": "500",
-        "quantity": "10",
-        "price": "1800",
-        "stock": "1"
     }
 ]`);
