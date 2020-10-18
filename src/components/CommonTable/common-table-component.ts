@@ -2,11 +2,15 @@ import { Component, Vue, Prop } from 'vue-property-decorator';
 import { highlight, breakUpToLocale } from "@/config/filetrs"
 import {Getter, Mutation} from "vuex-class";
 import {GET_DATA, SET_DATA} from "@/store/main-store/type-main";
+import EditModal from '@/components/CommonTable/EditModal/EditModal.vue'
 
 @Component({
     filters: {
         highlight,
         breakUpToLocale,
+    },
+    components: {
+        EditModal,
     }
 })
 export default class CommonTable extends Vue {
@@ -38,10 +42,6 @@ export default class CommonTable extends Vue {
         fat: 0,
         carbs: 0,
         protein: 0,
-    }
-
-    get formTitle () {
-        return this.editedIndex === -1 ? 'Добавить товар' : 'Редактировать товар'
     }
 
     get currentStore() {
