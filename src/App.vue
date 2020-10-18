@@ -1,22 +1,24 @@
 <template>
-  <div id="app">
-    <Home />
-  </div>
+  <v-app>
+    <v-main>
+      <Home />
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Home from "@/views/Home/Home.vue";
-@Component({
+import Vue from 'vue';
+import Home from './views/Home/Home.vue';
+
+export default Vue.extend({
+  name: 'App',
+
   components: {
     Home,
   },
-})
-export default class App extends Vue {}
 
+  data: () => ({
+    //
+  }),
+});
 </script>
-
-<style>
-  @import 'assets/styles/grid/grid.css';
-</style>
-
