@@ -42,7 +42,7 @@ export default class CommonTable extends Vue {
     }
 
     get formTitle () {
-        return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+        return this.editedIndex === -1 ? 'Добавить товар' : 'Редактировать товар'
     }
 
     get currentStore() {
